@@ -1,0 +1,56 @@
+<head>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+
+</head>
+
+
+<h1>listado de estudiantes</h1>
+
+<table border="1">
+ <thead>
+    <tr>
+
+    <th>nombre</th>
+    <th>correo</th>
+    <th>fecha de nacimiento</th>
+    <th>programa</th>
+    
+ </tr>
+</thead>
+<tbody>
+
+  <% @students.each do |student| %>
+ <tr>
+    <td><%=student.nombre%></td>
+    <td><%=student.correo%></td>
+    <td><%=student.fecha_nacimiento%></td>
+    <td><%=student.programa%></td>
+
+
+ </tr>
+ <% end %>
+ 
+
+</tbody>
+
+
+
+
+
+</table>
